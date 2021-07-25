@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff000000"
+    tools:context=".activity.MainControlActivity">
+
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/remoteVideoView"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/control_stick"
+        android:layout_width="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="@+id/remoteVideoView"
+        app:layout_constraintEnd_toEndOf="@+id/remoteVideoView"
+        app:layout_constraintBottom_toBottomOf="@+id/remoteVideoView"
+        android:layout_height="150dp">
+        <com.walkfure.chat.view.JoystickView
+            android:layout_alignParentStart="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
+        <com.walkfure.chat.view.JoystickView
+            android:layout_alignParentEnd="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
+
+    </RelativeLayout>
+    <com.baidu.mapapi.map.MapView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:id="@+id/mapX"
+        app:layout_constraintTop_toTopOf="@+id/remoteVideoView"
+        app:layout_constraintBottom_toBottomOf="@+id/remoteVideoView"
+        app:layout_constraintStart_toStartOf="@+id/remoteVideoView"
+        app:layout_constraintEnd_toEndOf="@+id/remoteVideoView"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:background="#80808080"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|top"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/remoteVideoView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+     >
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:id="@+id/setting_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_baseline_settings_24"
+            android:drawablePadding="0dp"
+            android:text="设置"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_twotone_map_24"
+            android:text="地图切换"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:id="@+id/videoX"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/ic_baseline_photo_camera_24"
+                android:text="拍照"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:id="@+id/videoX2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/ic_baseline_video_call_24_x"
+                android:text="录像"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:id="@+id/loundspeaker_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_baseline_call_missed_outgoing_24"
+            android:text="控制权"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:id="@+id/switch_camera_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_baseline_close_24"
+            android:text="结束"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#80808080"
+        android:layout_marginStart="0dp"
+        android:gravity="center_horizontal|top"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/remoteVideoView"
+        app:layout_constraintEnd_toEndOf="parent"
+       >
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_color_000003"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="车辆信息"/>
+
+
+
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/gg4"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="车辆信号"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:gravity="center"
+
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:background="@drawable/shape_color_000004"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="路程:N/A"/>
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:background="@drawable/shape_color_000005"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="速度:N/A"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/b4"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="电池电量"/>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

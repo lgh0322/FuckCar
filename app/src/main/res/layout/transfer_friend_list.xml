@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#86000000"
+    android:gravity="left"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/rl"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="200dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_color_transfer"
+    android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:gravity="center"
+    android:textSize="22sp"
+    android:text="选择朋友"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="#f0a000"/>
+    <ListView
+        android:id="@+id/lv"
+
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:divider="@color/gold"
+        android:dividerHeight="2dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+
+
+
+</RelativeLayout>

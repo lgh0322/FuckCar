@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_alignParentTop="true"
+        android:id="@+id/text22"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WalkFuture"
+        android:textColor="@color/red"
+        android:textSize="32sp"/>
+    <TextView
+        android:layout_below="@+id/text22"
+        android:id="@+id/text"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="远程遥控车"
+        android:textColor="@color/orange"
+        android:textSize="32sp"/>
+
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/img"
+        android:layout_width="260dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/car" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/img"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入手机号登陆"
+        android:textColor="#a0a0a0"
+        android:textSize="16sp"/>
+
+
+    <EditText
+        android:hint="手机号"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/text2"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_color_000001"
+        android:layout_width="match_parent"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="22sp"
+        android:id="@+id/a1"/>
+
+    <Button
+        android:id="@+id/yesX"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#a0a0a0"
+        android:text="下一步"
+        android:onClick="next"
+        android:textSize="22sp"
+        android:background="@color/gold"
+        android:layout_below="@+id/a1"/>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

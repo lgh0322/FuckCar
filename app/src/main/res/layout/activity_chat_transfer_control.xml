@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainControlActivity">
+
+
+
+
+
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/remoteVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/charttools_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/switch_camera_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ic_baseline_close_24"
+            android:padding="10dp"
+            android:background="#80000000"
+            android:text="断开连接"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/loundspeaker_tv"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ic_baseline_call_missed_outgoing_24"
+            android:padding="10dp"
+            android:background="#80000000"
+            android:text="收回控制权"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+</FrameLayout>

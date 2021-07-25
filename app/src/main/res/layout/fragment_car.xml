@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffF0F0f0">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/orange">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:text="我的遥控车"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#222222"
+            android:textSize="19sp" />
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/dada"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="208dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/car0" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#ffa0a0a0"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/network"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="50dp">
+        <TextView
+            android:text="当前网络不可用， 请检查"
+            android:textColor="@color/red"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:background="@color/gold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+
+</LinearLayout>
